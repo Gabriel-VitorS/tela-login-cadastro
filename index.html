@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="script/login.js"></script>
+</head>
+<body>
+
+    <main> <!--FORM DE LOGIN-->
+        <form id="login">
+
+            <span class="titulo-form">LOGIN</span>
+            
+            <label>E-mail:</label> 
+            <input type="email" class="inputs" id="email" onfocus="aumentaBarra(0)" onblur="diminuiBarra(0)"> 
+            <div class="barra"></div>
+            <span class="verifica">Digite o E-mail!</span>
+
+            <label>Senha:</label>
+            <input type="password" class="inputs" onfocus="aumentaBarra(1)" onblur="diminuiBarra(1)">
+            <div class="barra"></div>
+            <span class="verifica">Digite a senha!</span> 
+
+            <input type="button" value="ENTRAR" id="btn-login-entrar" onclick="entrar()">
+            <input type="button" value="CADASTRE-SE" id="btn-login-cadastrar" onclick="irCadastrar()">
+
+        </form>
+
+        <form id="cadastro"> <!--FORM DE CADASTRO-->
+
+            <span class="titulo-form">CADASTRO</span>
+            
+            <label>Nome:</label>
+            <input type="name" class="inputs" onfocus="aumentaBarra(2)" onblur="diminuiBarra(2)">
+            <div class="barra"></div> 
+            <span class="verifica">Digite o nome!</span>
+
+            <label>Sexo:</label>
+            <select class="inputs" onfocus="aumentaBarra(3)" onblur="diminuiBarra(3)">
+                <option ></option>
+                <option value="1">Feminino</option>
+                <option value="2">Masculino</option>
+            </select>
+            <div class="barra"></div>
+            <span class="verifica">Selecione o sexo!</span> 
+             
+
+            <label>Data e Nascimento:</label>
+            <input type="date" class="inputs" onfocus="aumentaBarra(4)" onblur="diminuiBarra(4)">
+            <div class="barra"></div>
+            <span class="verifica">Coloque a data de nascimento!</span> 
+
+            <label>E-mail:</label>
+            <input type="email" class="inputs" onfocus="aumentaBarra(5)" onblur="diminuiBarra(5)">
+            <div class="barra"></div> 
+            <span class="verifica">Digite o E-mail!</span>
+
+            <label>Senha:</label>
+            <input type="password" class="inputs" onfocus="aumentaBarra(6)" onblur="diminuiBarra(6)" onkeyup="verificaSenha()">
+            <div class="barra"></div>
+            <span class="verifica">Digite a senha!</span> 
+
+            <label>Redigite a senha:</label>
+            <input type="password" class="inputs" onfocus="aumentaBarra(7)" onblur="diminuiBarra(7)" onkeyup="verificaSenha()">
+            <div class="barra"></div>
+            <span class="verifica">Digite a senha!</span>
+            <span id="verifica-senha">Senha não confere!</span>  
+            
+            <input type="button" value="CADASTRAR" id="btn-cadastro-cadastrar" onclick="cadastrar()">
+            <input type="button" value="FAÇA O LOGIN" id="btn-cadastro-login" onclick="irLogin()">
+
+        </form>
+    </main>
+    
+</body>
+</html>

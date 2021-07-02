@@ -1,0 +1,142 @@
+*{
+    font-family: LatoLight;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../fonts/Lato-Light.ttf);
+}
+
+body{
+    background: #6dd5ed;
+    height: 100vh; 
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+#login, #cadastro{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+        
+}
+
+.titulo-form{
+    text-align: center;
+    font-size: 25px;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    outline: none;
+    border: none;
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.3);
+}
+select, option{
+    background-color: none;
+}
+
+.barra{
+    background: #2193b0;
+    width: 0%;
+    height: 2px;
+    transition: width 0.5s;
+    margin: auto;
+}
+
+.verifica{
+    color: red;
+    font-size: 15px;
+    display: none;
+}
+
+#verifica-senha{
+    color: red;
+    font-size: 15px;
+    display: none;
+}
+
+#btn-login-entrar, #btn-cadastro-cadastrar{
+    background: #2193b0;
+    color: white;
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+#btn-login-entrar:active, #btn-cadastro-cadastrar:active, #btn-login-cadastrar:active, #btn-cadastro-login:active{
+    background: #6dd5ed;
+}
+
+#btn-login-cadastrar, #btn-cadastro-login{
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px){
+    #login, #cadastro{
+        max-width: 300px;
+    }
+}
+    
+@media(max-width: 768px){
+
+    /*forms*/
+    #login, #cadastro{
+        position: fixed; 
+
+    }
+
+    #login{
+        margin-left: 0;
+        transition: margin-left 1s;
+        
+    }
+
+    #cadastro{
+        margin-right: -300vh;
+        transition: margin-right 1s; 
+    }
+
+    /*botões*/
+    #btn-login-entrar, #btn-cadastro-cadastrar{
+        background: #2193b0;
+        color: white;
+        width: 80%;
+        margin: 10px auto;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #btn-login-cadastrar, #btn-cadastro-login{
+        color: white;
+        display: block;
+        font-size: 15px;
+        width: 50%;
+        margin: 10px auto;
+        border: none;
+        border-radius: 10px;
+        background: #2193b0;
+    }
+
+}
+
