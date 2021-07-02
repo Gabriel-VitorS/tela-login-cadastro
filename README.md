@@ -1,4 +1,4 @@
-# tela-login-cadastro
+# Tela de Login e Cadastro
 Tela de cadastro feito com HTML5, CSS3 e Javascript Vanilla
 
 - Site responsivo.
